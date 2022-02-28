@@ -25,17 +25,25 @@ const Header = () => {
         className="app__header-info"
       >
         <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
-            <span>👋</span>
+          <motion.div
+            className="badge-cmp app__flex"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5, type: 'tween' }}
+          >
+            <span>🧑🏻‍🚀</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I'm</p>
               <h1 className="head-text">Alex Reyne</h1>
             </div>
-          </div>
-          <div className="tag-cmp app__flex">
+          </motion.div>
+          <motion.div
+            className="tag-cmp app__flex"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5, type: 'tween' }}
+          >
             <p className="p-text">Web Developer</p>
             <p className="p-text">Graphic Designer</p>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
@@ -45,13 +53,11 @@ const Header = () => {
         className="app__header-img"
       >
         <img src={images.logo} alt="profile_bg" />
-        <motion.img
+        {/* <motion.div
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
-          src={images.circle}
-          alt="profile_circle"
           className="overlay_circle"
-        />
+        ></motion.div> */}
       </motion.div>
 
       <motion.div
@@ -60,9 +66,14 @@ const Header = () => {
         className="app__header-circles"
       >
         {[images.javascript, images.react, images.sass].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+          <motion.div
+            className="circle-cmp app__flex"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5, type: 'tween' }}
+            key={`circle-${index}`}
+          >
             <img src={circle} alt="circle" />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
