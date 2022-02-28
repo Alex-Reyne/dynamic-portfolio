@@ -168,9 +168,25 @@
     }
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     div {
       margin: 0;
+    }
+
+    div:nth-child(1) {
+      width: 75px;
+      height: 75px;
+    }
+
+    div:nth-child(2) {
+      margin: 1rem;
+      width: 100px;
+      height: 100px;
+    }
+
+    div:nth-child(3) {
+      width: 60px;
+      height: 60px;
     }
   }
 }
