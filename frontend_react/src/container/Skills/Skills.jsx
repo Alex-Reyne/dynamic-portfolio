@@ -12,7 +12,7 @@ const Skills = () => {
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+    const skillsQuery = '*[_type == "skills"] | order(name) { _id, name, bgColor, icon }';
 
     client.fetch(query).then((data) => {
       setExperience(data);
@@ -30,7 +30,8 @@ const Skills = () => {
           {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: 0 }}
               className="app__skills-item app__flex"
               key={skill.name}
             >
@@ -43,7 +44,7 @@ const Skills = () => {
         </motion.div>
         <motion.div className="app__skills-exp">
           {experience.map((experience, index) => (
-            <motion.div className="app__skills-exp-item" key={experience.year}>
+            <motion.div className="app__skills-exp-item" key={index}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
