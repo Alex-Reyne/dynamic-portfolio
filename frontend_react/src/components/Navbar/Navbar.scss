@@ -6,10 +6,8 @@
   align-items: center;
 
   padding: 1rem 10%;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  // background-color: #ffffff09;
-  // backdrop-filter: blur(5px);
+  background-color: #ffffff09;
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
@@ -44,23 +42,15 @@
     margin: 0 1rem;
     cursor: pointer;
 
-    flex-direction: column;
-
-    div {
-      width: 5px;
-      height: 5px;
-      background: transparent;
-      border-radius: 50%;
-      margin-bottom: 5px;
-    }
+    flex-direction: row;
 
     a {
-      color: var(--gray-color);
+      color: var(--white-color);
       text-decoration: none;
       flex-direction: column;
 
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
 
       transition: all 0.3s ease-in-out;
 
@@ -69,10 +59,10 @@
       }
     }
 
-    &:hover {
-      div {
-        background-color: var(--secondary-color);
-      }
+    sup {
+      color: var(--secondary-color);
+      margin-right: 0.25rem;
+      margin-bottom: 0.75rem;
     }
   }
 
@@ -97,7 +87,7 @@
   svg {
     width: 70%;
     height: 70%;
-    color: var(--white-color);
+    color: var(--black-color);
   }
 
   div {
@@ -109,7 +99,7 @@
 
     padding: 1rem;
 
-    width: 80%;
+    width: 50%;
     height: 100vh;
 
     display: flex;
@@ -117,12 +107,8 @@
     align-items: flex-end;
     flex-direction: column;
 
-    background: url('../../assets/bgWhite.png');
-    background-color: var(--white-color);
-    background-size: cover;
-    background-repeat: repeat;
-
-    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+    background-color: var(--gray-color);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
     svg {
       width: 35px;
@@ -133,30 +119,38 @@
 
     ul {
       list-style: none;
-      margin: 0;
+      margin-top: 4rem;
       padding: 0;
       height: 100%;
       width: 100%;
 
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: center;
       flex-direction: column;
 
       li {
         margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+
+        transition: all 0.3s ease-in-out;
+
+        sup {
+          color: var(--secondary-color);
+          margin-right: 0.25rem;
+        }
 
         a {
-          color: var(--gray-color);
+          padding: 1rem 5rem;
+          color: var(--primary-color);
           text-decoration: none;
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
 
-          transition: all 0.3s ease-in-out;
-
           &:hover {
-            color: var(--secondary-color);
+            color: var(--white-color);
           }
         }
       }
