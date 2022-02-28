@@ -4,6 +4,7 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -40,7 +41,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee and chat with me</h2>
+      <h2 className="head-text">Get in touch with me</h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
