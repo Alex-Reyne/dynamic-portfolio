@@ -1,25 +1,30 @@
 export default {
-  name: "abouts",
-  title: "Abouts",
-  type: "document",
+  name: 'abouts',
+  title: 'Abouts',
+  type: 'document',
   fields: [
     {
-      name: "title",
-      title: "Title",
-      type: "string",
+      name: 'title',
+      title: 'Title',
+      type: 'string',
     },
     {
-      name: "description",
-      title: "Description",
-      type: "string",
+      name: 'description',
+      title: 'Description',
+      type: 'string',
     },
     {
-      name: "imgUrl",
-      title: "ImgUrl",
-      type: "image",
+      name: 'imgUrl',
+      title: 'ImgUrl',
+      type: 'image',
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'number',
+      title: 'Number',
+      type: 'number',
     },
   ],
 };
