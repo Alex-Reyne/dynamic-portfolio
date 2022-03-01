@@ -2,6 +2,7 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .app__testimonial-item {
@@ -17,7 +18,10 @@
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.25rem;
-  box-shadow: 0px 0px 40px #1d1d1d;
+
+  &:hover {
+    box-shadow: 0 0 25px #ffffff08;
+  }
 
   transition: all 0.3s ease-in-out;
 
@@ -95,7 +99,6 @@
     background-color: #ffffff09;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0px 0px 40px #1d1d1d;
 
     margin: 1rem;
     transition: all 0.3s ease-in-out;
@@ -108,6 +111,7 @@
 
     &:hover {
       background-color: var(--secondary-color);
+      box-shadow: 0 0 25px #ffffff08;
 
       svg {
         color: var(--gray-color);

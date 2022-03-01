@@ -26,5 +26,10 @@ export default {
       title: 'Feedback',
       type: 'string',
     },
+    {
+      name: 'number',
+      title: 'Number',
+      type: 'number',
+    },
   ],
 };
