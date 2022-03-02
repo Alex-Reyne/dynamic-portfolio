@@ -15,6 +15,12 @@
   z-index: 2;
 }
 
+@-moz-document url-prefix() {
+  .app__navbar {
+    background-color: #252528ee;
+  }
+}
+
 .app__navbar-logo {
   display: flex;
   justify-content: flex-start;
