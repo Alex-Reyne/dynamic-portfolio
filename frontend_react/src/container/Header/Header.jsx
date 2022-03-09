@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { scroller } from 'react-scroll';
 
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
@@ -17,6 +18,10 @@ const scaleVariants = {
 };
 
 const Header = () => {
+  const scrollToSection = () => {
+    scroller.scrollTo('skills', null);
+  };
+
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -30,6 +35,9 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5, type: 'tween' }}
           >
+            <a href="https://github.com/alex-reyne" target="_blank">
+              <span></span>
+            </a>
             <span>🧑🏻‍🚀</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I'm</p>
@@ -70,6 +78,7 @@ const Header = () => {
             className="circle-cmp app__flex"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5, type: 'tween' }}
+            onClick={(e) => scrollToSection()}
             key={`circle-${index}`}
           >
             <img src={circle} alt="circle" />
