@@ -15,7 +15,7 @@ const SocialMedia = () => {
           <BsLinkedin />
         </div>
       </a>
-      <a href="https://linktr.ee/alexreyne" target="_blank">
+      <a href="https://reynedrops.ca" target="_blank">
         <div>
           <SiLinktree />
         </div>
